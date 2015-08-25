@@ -10,13 +10,7 @@ RUN echo "HEAD /" | nc `cat /tmp/host_ip.txt` 8000 | grep squid-deb-proxy \
 
 RUN apt-get update
 
-RUN apt-get install -y imagemagick
-RUN apt-get install -y libmagickwand-dev
-RUN apt-get install -y gifsicle 
-RUN apt-get -y install ruby1.9.1 ruby1.9.1-dev 
-RUN apt-get install -y build-essential curl git vim
-
-RUN apt-get install -y python-software-properties software-properties-common
+RUN apt-get install -y imagemagick libmagickwand-dev gifsicle ruby1.9.1 ruby1.9.1-dev build-essential curl git vim python-software-properties software-properties-common
 RUN add-apt-repository ppa:mc3man/trusty-media
 RUN apt-get update
 RUN apt-get -y install ffmpeg
