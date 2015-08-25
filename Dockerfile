@@ -26,3 +26,4 @@ ADD Gemfile /tmp/Gemfile
 RUN cd /tmp; bundle install
 
 WORKDIR /srv/screengif
+ENTRYPOINT ["bin/screengif"]
